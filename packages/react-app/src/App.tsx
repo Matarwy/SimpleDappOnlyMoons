@@ -172,8 +172,8 @@ const AppContent: React.FC = () => {
           <NavBar />
 
           <Routes>
-            <Route path="/launches" element={<ComingSoon />} />
-            <Route path="/deployer" element={<ComingSoon />} />
+            {/* <Route path="/launches" element={<ComingSoon />} />
+            <Route path="/deployer" element={<ComingSoon />} /> */}
             <Route
               path="/locker/search/:account"
               element={
@@ -222,15 +222,15 @@ const AppContent: React.FC = () => {
                 </TokenLockerManagerV1ContractContextProvider>
               }
             />
-            <Route path="/bridge" element={<Bridge />} />
-            {/* <Route path="/staking/create" element={<CreateStaking />} /> */}
+            {/* <Route path="/bridge" element={<Bridge />} />
+            <Route path="/staking/create" element={<CreateStaking />} />
             <Route path="/staking/deploy" element={<Staking viewMode="deploy" />} />
             <Route path="/staking/all" element={<Staking viewMode="all" />} />
             <Route path="/staking" element={<Staking viewMode="split" />} />
-            <Route path="/fundraising" element={<Fundraising />} />
-            <Route path="/governance" element={<ComingSoon />} />
-            <Route path="/faucet" element={<Faucets />} />
-            <Route path="/stats" element={<ComingSoon />} />
+            <Route path="/fundraising" element={<Fundraising />} /> */}
+            {/* <Route path="/governance" element={<ComingSoon />} /> */}
+            {/* <Route path="/faucet" element={<Faucets />} /> */}
+            {/* <Route path="/stats" element={<ComingSoon />} /> */}
             <Route path="/" element={<Home />} />
           </Routes>
         </RightArea>

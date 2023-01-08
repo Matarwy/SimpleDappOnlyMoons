@@ -112,7 +112,7 @@ const Home: React.FC = () => {
         <HeroContent>
           <HeroSection>
             <Header>
-              <em className="font-bold text-indigo-500">Open source</em>
+              <em className="font-bold text-indigo-500">RoyalProof Locker</em>
               <br />
               EVM utility suite.
               {/* <span className="font-bold">Only</span>Moons */}
@@ -121,25 +121,25 @@ const Home: React.FC = () => {
             {/* <Description>A community driven launchpad.</Description> */}
 
             <Links>
-              <MainAnchor href="https://onlymoons.gitbook.io/">Documentation</MainAnchor>
+              <MainAnchor href="https://royalproof.net/">Audit & KYC</MainAnchor>
             </Links>
 
             <Links>
-              <SocialLink href="https://t.me/OnlyMoonsTeam" title="Telegram">
+              <SocialLink href="https://t.me/RoyalProofOfficial" title="Telegram">
                 <FontAwesomeIcon icon={faTelegramPlane} />
               </SocialLink>
 
-              <SocialLink href="https://discord.gg/E8hXdpKenM" title="Discord">
+              {/* <SocialLink href="https://discord.gg/E8hXdpKenM" title="Discord">
                 <FontAwesomeIcon icon={faDiscord} />
-              </SocialLink>
+              </SocialLink> */}
 
-              <SocialLink href="https://twitter.com/OnlyMoonsTeam" title="Twitter">
+              <SocialLink href="https://twitter.com/RoyalproofAudit" title="Twitter">
                 <FontAwesomeIcon icon={faTwitter} />
               </SocialLink>
 
-              <SocialLink href="https://github.com/onlymoons-io/onlymoons" title="GitHub">
+              {/* <SocialLink href="https://github.com/onlymoons-io/onlymoons" title="GitHub">
                 <FontAwesomeIcon icon={faGithub} />
-              </SocialLink>
+              </SocialLink> */}
             </Links>
           </HeroSection>
 
@@ -147,7 +147,7 @@ const Home: React.FC = () => {
           <HeroSection className="flex justify-end">
             <motion.div initial={{ translateY: 20 }} animate={{ translateY: 0 }} transition={{ duration: 1 }}>
               <motion.img
-                className="w-96 h-96 bg-blue-500 rounded-full object-cover pointer-events-none"
+                className="w-96 h-96 rounded object-cover pointer-events-none"
                 src={logoSrc}
                 style={{ maxWidth: '30vw', maxHeight: '30vw' }}
                 initial={{ opacity: 0 }}
@@ -159,7 +159,7 @@ const Home: React.FC = () => {
         </HeroContent>
       </HeroOuter>
 
-      <About />
+      {/* <About /> */}
       {/* <Contract /> */}
       {/* <Roadmap /> */}
     </Outer>

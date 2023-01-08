@@ -67,7 +67,6 @@ const LogoImgWrapperCSS = styled.span`
 `
 
 const LogoImgWrapper = tw(LogoImgWrapperCSS)`
-  bg-blue-500
   rounded-full
 `
 
@@ -123,8 +122,8 @@ const NavBar: React.FC = () => {
               </LogoImgWrapper>
 
               <LogoText>
-                <span className="font-light">Only</span>
-                <span className="font-bold">Moons</span>
+                <span className="font-light">RoyalProof</span>
+                <span className="font-bold">Locker</span>
               </LogoText>
             </LogoLink>
           </Header>

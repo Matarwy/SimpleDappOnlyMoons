@@ -1,21 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
 
-/**
-  /$$$$$$            /$$           /$$      /$$                                        
- /$$__  $$          | $$          | $$$    /$$$                                        
-| $$  \ $$ /$$$$$$$ | $$ /$$   /$$| $$$$  /$$$$  /$$$$$$   /$$$$$$  /$$$$$$$   /$$$$$$$
-| $$  | $$| $$__  $$| $$| $$  | $$| $$ $$/$$ $$ /$$__  $$ /$$__  $$| $$__  $$ /$$_____/
-| $$  | $$| $$  \ $$| $$| $$  | $$| $$  $$$| $$| $$  \ $$| $$  \ $$| $$  \ $$|  $$$$$$ 
-| $$  | $$| $$  | $$| $$| $$  | $$| $$\  $ | $$| $$  | $$| $$  | $$| $$  | $$ \____  $$
-|  $$$$$$/| $$  | $$| $$|  $$$$$$$| $$ \/  | $$|  $$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$$/
- \______/ |__/  |__/|__/ \____  $$|__/     |__/ \______/  \______/ |__/  |__/|_______/ 
-                         /$$  | $$                                                     
-                        |  $$$$$$/                                                     
-                         \______/                                                      
-
-  https://onlymoons.io/
-*/
-
 pragma solidity ^0.8.0;
 
 interface ITokenLockerManagerV1 {
@@ -51,5 +35,6 @@ interface ITokenLockerManagerV1 {
     uint256 price1
   );
   function getTokenLockersForAddress(address address_) external view returns (uint40[] memory);
+  function getIsExempt(address owner) external view returns (bool);
   function notifyLockerOwnerChange(uint40 id_, address newOwner_, address previousOwner_, address createdBy_) external;
 }

@@ -11,10 +11,10 @@
         "cro": "0x016c1D8cf86f60A5382BA5c42D4be960CBd1b868"
       },
       "56": {
-        "bsc": "0x016c1D8cf86f60A5382BA5c42D4be960CBd1b868"
+        "bsc": "0x8EF89590CC034F45CB6624689B13224BB1D6D2Bc"
       },
       "97": {
-        "bsctest": "0x67f5b7f5Ed623De0F57AE53B6801812Ad73b5d66"
+        "bsctest": "0xCafE102e1a9ebE9874465c944916A8A8fD885480"
       },
       "122": {
         "fuse": "0x77110f67C0EF3c98c43570BADe06046eF6549876"
@@ -23,7 +23,7 @@
         "fusetest": "0x695C4825C25dd354eCC393eDF092Ac61d50E5B61"
       },
       "137": {
-        "polygon": "0x016c1D8cf86f60A5382BA5c42D4be960CBd1b868"
+        "polygon": "0x8EF89590CC034F45CB6624689B13224BB1D6D2Bc"
       },
       "588": {
         "metistest": "0x8DEE2F1768ed500FA9e0598378C6e8F18DAB07D6"

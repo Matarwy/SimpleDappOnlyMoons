@@ -17,6 +17,7 @@ import {
   faRocket,
   faUniversity,
 } from '@fortawesome/free-solid-svg-icons'
+import { faTelegramPlane, faTwitter } from '@fortawesome/free-brands-svg-icons'
 // import Tooltip from '../Tooltip'
 import { useAppNavState } from '../../App'
 
@@ -117,24 +118,47 @@ const LeftNav: React.FC = () => {
   return (
     <Outer className={`${leftNavExpanded ? 'border-r' : 'border-r-0'}`}>
       <Inner>
-        <NavItem to="/launches" icon={<FontAwesomeIcon icon={faRocket} fixedWidth />} label="Launches" />
+        {/* <NavItem
+          to="/launches" 
+          icon={<FontAwesomeIcon icon={faRocket} fixedWidth />} 
+          label="Launches" />
+        <Separator /> */}
+        <NavItem
+          href="https://royalproof.net" 
+          icon={<FontAwesomeIcon icon={faRocket} fixedWidth />} 
+          label="Home" />
         <Separator />
         <NavItem to="/locker" icon={<FontAwesomeIcon icon={faLock} fixedWidth />} label="Locker" />
-        {/* <NavItem to="/bridge" icon={<FontAwesomeIcon icon={faExchangeAlt} fixedWidth />} label="Bridge" /> */}
-        <NavItem to="/staking" icon={<FontAwesomeIcon icon={faPiggyBank} fixedWidth />} label="Staking" />
-        <NavItem to="/deployer" icon={<FontAwesomeIcon icon={faFileCode} fixedWidth />} label="Deployer" />
-        <NavItem to="/governance" icon={<FontAwesomeIcon icon={faUniversity} fixedWidth />} label="Governance" />
-        {/* <NavItem to="/fundraising" icon={<FontAwesomeIcon icon={faHandsHolding} fixedWidth />} label="Fundraising" /> */}
-        {chainId === 97 && (
-          <NavItem to="/faucet" icon={<FontAwesomeIcon icon={faFaucet} fixedWidth />} label="Faucet" />
-        )}
         <Separator />
-        <NavItem to="/stats" icon={<FontAwesomeIcon icon={faChartLine} fixedWidth />} label="Stats" />
+        <NavItem
+          href="https://t.me/Royalproof_Admin" 
+          icon={<FontAwesomeIcon icon={faTelegramPlane} fixedWidth />} 
+          label="Contact us" />
+        <Separator />
+        <NavItem
+          href="https://t.me/RoyalProofOfficial" 
+          icon={<FontAwesomeIcon icon={faTelegramPlane} fixedWidth />} 
+          label="Telegram" />
+        <Separator />
+        <NavItem
+          href="https://twitter.com/RoyalproofAudit" 
+          icon={<FontAwesomeIcon icon={faTwitter} fixedWidth />} 
+          label="Twitter" />
+        {/* <NavItem to="/bridge" icon={<FontAwesomeIcon icon={faExchangeAlt} fixedWidth />} label="Bridge" /> */}
+        {/* <NavItem to="/staking" icon={<FontAwesomeIcon icon={faPiggyBank} fixedWidth />} label="Staking" />
+        <NavItem to="/deployer" icon={<FontAwesomeIcon icon={faFileCode} fixedWidth />} label="Deployer" />
+        <NavItem to="/governance" icon={<FontAwesomeIcon icon={faUniversity} fixedWidth />} label="Governance" /> */}
+        {/* <NavItem to="/fundraising" icon={<FontAwesomeIcon icon={faHandsHolding} fixedWidth />} label="Fundraising" /> */}
+        {/* {chainId === 97 && (
+          <NavItem to="/faucet" icon={<FontAwesomeIcon icon={faFaucet} fixedWidth />} label="Faucet" />
+        )} */}
+        {/* <Separator /> */}
+        {/* <NavItem to="/stats" icon={<FontAwesomeIcon icon={faChartLine} fixedWidth />} label="Stats" />
         <NavItem
           href="https://onlymoons.gitbook.io/"
           icon={<FontAwesomeIcon icon={faBook} fixedWidth />}
           label="Documentation"
-        />
+        /> */}
       </Inner>
     </Outer>
   )

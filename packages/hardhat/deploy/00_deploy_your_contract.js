@@ -27,11 +27,11 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     log: true,
   });
 
-  /* const testToken = */ await deploy("ERC20", {
-    from: deployer,
-    args: ["My Cool Token", "COOL", 69000000],
-    log: true,
-  });
+  // /* const testToken = */ await deploy("ERC20", {
+  //   from: deployer,
+  //   args: ["My Cool Token", "COOL", 69000000],
+  //   log: true,
+  // });
 
   // leave this commented because we never want to deploy it again on any network.
   // the exception might be a testnet somewhere
