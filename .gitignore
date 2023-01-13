@@ -68,3 +68,4 @@ yarn-error.log*
 *.stackdump
 
 .keys/
+packages/hardhat/arguments.js
