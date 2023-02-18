@@ -131,7 +131,7 @@ const LeftNav: React.FC = () => {
         <NavItem to="/locker" icon={<FontAwesomeIcon icon={faLock} fixedWidth />} label="Locker" />
         <Separator />
         <NavItem
-          href="https://t.me/Royalproof_Admin" 
+          href="https://t.me/RoyalProofAdmin" 
           icon={<FontAwesomeIcon icon={faTelegramPlane} fixedWidth />} 
           label="Contact us" />
         <Separator />
