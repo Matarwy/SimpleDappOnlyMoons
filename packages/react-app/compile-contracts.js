@@ -9,7 +9,7 @@ const contractsData = require(contractsSource)
 const compiledContracts = {}
 
 // skip these contracts, because we just don't need them
-const contractsToSkip = ['ERC20', 'OnlyMoons']
+const contractsToSkip = ['ERC20', 'RoyalProof']
 
 for (const chainId of Object.keys(contractsData)) {
   for (const networkName of Object.keys(contractsData[chainId])) {

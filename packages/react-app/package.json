@@ -3,7 +3,7 @@
   "version": "0.0.31",
   "private": true,
   "license": "GPL-3.0+",
-  "author": "OnlyMoons <admin@onlymoons.io>",
+  "author": "RoyalProof",
   "homepage": ".",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.3.0",

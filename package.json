@@ -10,7 +10,7 @@
   ],
   "private": true,
   "license": "GPL-3.0+",
-  "author": "OnlyMoons <admin@onlymoons.io>",
+  "author": "RoyalProof",
   "scripts": {
     "react-app:build": "yarn workspace @onlymoons-io/react-app build --max-old-space-size=12288",
     "react-app:eject": "yarn workspace @onlymoons-io/react-app eject",
