@@ -15,6 +15,7 @@ import { LockWatchlist } from './LockWatchlist'
 import contracts from '../../contracts/compiled_contracts.json'
 import SwitchNetworkButton from '../SwitchNetworkButton'
 import { getNetworkDataByChainId } from '../../util'
+import { TokenLockData } from '../../typings'
 // import { NetworkData } from '../../typings'
 
 // const contracts = _contracts as any
@@ -32,7 +33,7 @@ const Locker: React.FC<LockerProps> = ({ useWatchlist = false }) => {
   const mounted = usePromise()
   const { account: accountToCheck, chainId: _chainIdToUse, id: idToUse } = useParams()
   const { chainId, connector } = useContext(getWeb3ReactContext('constant'))
-  const { contract, getTokenLockersForAddress, tokenLockerCount } = useTokenLockerManagerV1Contract()
+  const { contract, getTokenLockersForAddress, tokenLockerCount,  getTokenLockData} = useTokenLockerManagerV1Contract()
   const [filterInputValue, setFilterInputValue] = useState<string>()
   const [lockIds, setLockIds] = useState<number[]>([])
   const wasUsingWatchlist = useRef<boolean>(false)
@@ -158,8 +159,13 @@ const Locker: React.FC<LockerProps> = ({ useWatchlist = false }) => {
                   {lockIds
                     .map((id) => id)
                     .reverse()
+                    .filter((id) => {
+                      if (id === 4) return false
+                      if (id === 5) return false
+                      return true
+                    })
                     .map((lockId) => {
-                      return <Lock key={lockId} lockId={lockId} />
+                        return <Lock key={lockId} lockId={lockId} />
                     })}
                 </Locks>
               )}
