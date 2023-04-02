@@ -162,6 +162,7 @@ const Locker: React.FC<LockerProps> = ({ useWatchlist = false }) => {
                     .filter((id) => {
                       if (id === 4) return false
                       if (id === 5) return false
+                      if (id == 0) return false
                       return true
                     })
                     .map((lockId) => {
